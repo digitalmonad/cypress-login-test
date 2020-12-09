@@ -1,4 +1,4 @@
-import { App } from "./components/@app/App";
+import { App } from "./views/App";
 import { GlobalStyle } from "./themes/globalStyles";
 import { Grommet } from "grommet";
 import React from "react";
@@ -8,7 +8,7 @@ import { theme } from "./themes/defaultTheme";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Grommet {...{ theme }}>
+    <Grommet {...{ theme }} full>
       <Router>
         <GlobalStyle />
         <App />

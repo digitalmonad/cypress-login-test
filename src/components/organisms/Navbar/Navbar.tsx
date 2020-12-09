@@ -1,18 +1,20 @@
-import { Box } from "grommet";
+import { Header, Text } from "grommet";
+
 import { FC } from "react";
 
-interface NavbarPropsI {}
+interface NavbarPropsI {
+  title: string;
+}
 
-export const Navbar: FC<NavbarPropsI> = (props) => (
-  <Box
-    tag='header'
-    direction='row'
-    align='center'
-    justify='between'
+export const Navbar: FC<NavbarPropsI> = ({ title }) => (
+  <Header
+    gridArea='header'
     background='brand'
-    pad={{ left: "medium", right: "small", vertical: "small" }}
-    elevation='medium'
-    style={{ zIndex: 1 }}
-    {...props}
-  />
+    as='header'
+    pad='small'
+    height='60px'
+    flex={false}
+  >
+    <Text>{title}</Text>
+  </Header>
 );
